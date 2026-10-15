@@ -1,4 +1,5 @@
 package Tecnologias;
+import Cursos.Cursos;
 
 public class Tecnologias implements ContabilizarHoras{
     String nome;
@@ -27,7 +28,10 @@ public class Tecnologias implements ContabilizarHoras{
     }
 
     @Override
-    public int AdicionarHoras(int horasAdicionadas) {
-        return duracaoEmHoras+=horasAdicionadas;
+    public int AdicionarHoras(Cursos curso) {
+        if (curso.getStatus().equalsIgnoreCase("concluído")) {
+            return duracaoEmHoras += curso.getDuracaoEmHoras();
+        }
+        return 0;
     }
 }
