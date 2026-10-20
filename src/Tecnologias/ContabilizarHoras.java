@@ -1,7 +1,7 @@
 package Tecnologias;
 
-import Cursos.Cursos;
+import Cursos.Curso;
 
 public interface ContabilizarHoras {
-    int AdicionarHoras(Cursos horas);
+    int AdicionarHoras(Curso horas);
 }
