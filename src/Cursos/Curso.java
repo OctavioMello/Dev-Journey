@@ -17,24 +17,12 @@ public class Curso {
         this.duracaoEmHoras=duracaoEmHoras;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public String getPlataforma() {
-        return plataforma;
-    }
-
-    public String getTecnologia() {
-        return tecnologia;
+    public void setStatus(String status){
+        this.status=status;
     }
 
     public String getStatus() {
         return status;
-    }
-
-    public void setStatus(String status){
-        this.status=status;
     }
 
     public int getDuracaoEmHoras() {
