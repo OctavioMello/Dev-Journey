@@ -1,15 +1,15 @@
 package Cursos;
 
-import Tecnologias.Tecnologias;
+import Tecnologias.Tecnologia;
 
-public class Cursos {
+public class Curso {
     String nome;
     String plataforma;
-    Tecnologias tecnologia;
+    String tecnologia;
     String status;
     int duracaoEmHoras;
 
-    public Cursos(String nome, String plataforma, Tecnologias tecnologia, String status, int duracaoEmHoras){
+    public Curso(String nome, String plataforma, String tecnologia, String status, int duracaoEmHoras){
         this.nome=nome;
         this.plataforma=plataforma;
         this.tecnologia=tecnologia;
@@ -25,7 +25,7 @@ public class Cursos {
         return plataforma;
     }
 
-    public Tecnologias getTecnologia() {
+    public String getTecnologia() {
         return tecnologia;
     }
 
@@ -33,11 +33,16 @@ public class Cursos {
         return status;
     }
 
+    public void setStatus(String status){
+        this.status=status;
+    }
+
     public int getDuracaoEmHoras() {
         return duracaoEmHoras;
     }
 
-    public void atualizarStatus(String novoStatus){
-        this.status=novoStatus;
+    @Override
+    public String toString() {
+        return "Nome: "+nome+"\nPlataforma: "+plataforma+"\nTecnologias: "+tecnologia+"\nStatus: "+status+"\nDuração: "+duracaoEmHoras+"horas";
     }
 }
