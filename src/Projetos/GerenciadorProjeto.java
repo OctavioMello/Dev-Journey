@@ -18,10 +18,11 @@ public class GerenciadorProjeto {
             System.out.println("Não há projetos cadastrados!");
             return;
         }
-        System.out.println("Projetos cadastrados!");
+        int i = 1;
+        System.out.println("Projetos cadastrados:");
         for (Projeto projeto : listaProjetos){
             System.out.println();
-            System.out.println(projeto);
+            System.out.println(i+". \n"+projeto);
         }
     }
 
@@ -30,7 +31,7 @@ public class GerenciadorProjeto {
         System.out.println("Status atualizado!");
     }
 
-    public void adicionarTecnologia(Projeto projeto, Tecnologia tecnologia){
-        projeto.tecnologias.add(tecnologia);
+    public void adicionarTecnologia(Tecnologia tecnologia, int indice){
+        listaProjetos.get(indice).tecnologias.add(tecnologia.getNome());
     }
 }

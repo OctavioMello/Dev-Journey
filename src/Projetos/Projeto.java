@@ -8,13 +8,13 @@ import java.util.List;
 public class Projeto {
     String nome;
     String descricao;
-    List<Tecnologia> tecnologias = new ArrayList<>();
+    List<String> tecnologias = new ArrayList<>();
     String status;
 
     public Projeto(String nome, String descricao, Tecnologia tecnologia, String status){
         this.nome=nome;
         this.descricao=descricao;
-        tecnologias.add(tecnologia);
+        tecnologias.add(tecnologia.getNome());
         this.status=status;
     }
 
@@ -24,6 +24,6 @@ public class Projeto {
 
     @Override
     public String toString() {
-        return "Nome: "+nome+"\nDescrição: "+descricao+"\nTecnologias: "+tecnologias+"\nStatus: "+status;
+        return "Nome: "+nome+"\nDescrição: "+descricao+"\nTecnologias: "+String.join(", ", tecnologias)+"\nStatus: "+status;
     }
 }

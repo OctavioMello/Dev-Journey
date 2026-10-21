@@ -10,6 +10,10 @@ public class Tecnologia implements ContabilizarHoras{
         this.nome=nome;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
     @Override
     public String toString() {
         return "Nome: "+nome+"\nHoras estudadas: "+horasEstudadas+"\nNível: "+nivel;
